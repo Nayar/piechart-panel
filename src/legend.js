@@ -157,7 +157,10 @@ angular.module('grafana.directives').directive('piechartLegend', function(popove
           html += '</span>';
 
           html += '<span class="graph-legend-alias" style="float:none;">';
-          html += '<a>' + series.label + '</a>';
+          if(panel.field_contained != "")
+              html += '<a href="/dashboard/db/resultat?var-Filters=' + panel.field_contained + '|%3D|' + series.label + '" target="_blank">' + series.label + '</a>';
+          else
+              html += '<a>' + series.label + '</a>';
           html += '</span>';
 
           if (showValues && tableLayout) {

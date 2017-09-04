@@ -33,7 +33,8 @@ export class PieChartCtrl extends MetricsPanelCtrl {
 	  combine: {
 	    threshold: 0.0,
 	    label: 'Others'
-	  }
+	  },
+      field_contained: ""
     };
 
     _.defaults(this.panel, panelDefaults);
