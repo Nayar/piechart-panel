@@ -158,7 +158,7 @@ angular.module('grafana.directives').directive('piechartLegend', function(popove
 
           html += '<span class="graph-legend-alias" style="float:none;">';
           if(panel.field_contained != "")
-              html += '<a href="/dashboard/db/resultat?var-Filters=' + panel.field_contained + '|%3D|' + series.label + '" target="_blank">' + series.label + '</a>';
+              html += '<a href="/dashboard/db/resultats?var-Filters=' + panel.field_contained + '|%3D|' + series.label + '" target="_blank">' + series.label + '</a>';
           else
               html += '<a>' + series.label + '</a>';
           html += '</span>';
