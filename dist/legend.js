@@ -120,10 +120,10 @@ System.register(['angular', 'app/core/utils/kbn', 'jquery', 'jquery.flot', 'jque
               if (tableLayout) {
                 var header = '<tr><th colspan="2" style="text-align:left"></th>';
                 if (panel.legend.values) {
-                  header += '<th class="pointer">{{ "values" | translate }} </th>';
+                  //             header += '<th class="pointer">values</th>';
                 }
                 if (panel.legend.percentage) {
-                  header += '<th class="pointer">{{ "percentage" | translate }}</th>';
+                  //             header += '<th class="pointer">percentage</th>';
                 }
                 header += '</tr>';
                 $container.append($(header));
