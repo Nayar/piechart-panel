@@ -120,10 +120,10 @@ System.register(['angular', 'app/core/utils/kbn', 'jquery', 'jquery.flot', 'jque
               if (tableLayout) {
                 var header = '<tr><th colspan="2" style="text-align:left"></th>';
                 if (panel.legend.values) {
-                  header += '<th class="pointer">values</th>';
+                  header += '<th class="pointer">{{ "values" | translate }} </th>';
                 }
                 if (panel.legend.percentage) {
-                  header += '<th class="pointer">percentage</th>';
+                  header += '<th class="pointer">{{ "percentage" | translate }}</th>';
                 }
                 header += '</tr>';
                 $container.append($(header));
@@ -164,7 +164,7 @@ System.register(['angular', 'app/core/utils/kbn', 'jquery', 'jquery.flot', 'jque
                 html += '</span>';
 
                 html += '<span class="graph-legend-alias" style="float:none;">';
-                if (panel.field_contained != "") html += '<a href="/dashboard/db/resultat?var-Filters=' + panel.field_contained + '|%3D|' + series.label + '" target="_blank">' + series.label + '</a>';else html += '<a>' + series.label + '</a>';
+                if (panel.field_contained != "") html += '<a href="/dashboard/db/resultats?var-Filters=' + panel.field_contained + '|%3D|' + series.label + '" target="_blank">' + series.label + '</a>';else html += '<a>' + series.label + '</a>';
                 html += '</span>';
 
                 if (showValues && tableLayout) {

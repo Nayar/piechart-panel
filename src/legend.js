@@ -113,10 +113,10 @@ angular.module('grafana.directives').directive('piechartLegend', function(popove
         if (tableLayout) {
           var header = '<tr><th colspan="2" style="text-align:left"></th>';
           if (panel.legend.values) {
-            header += '<th class="pointer">values</th>';
+//             header += '<th class="pointer">values</th>';
           }
           if (panel.legend.percentage) {
-            header += '<th class="pointer">percentage</th>';
+//             header += '<th class="pointer">percentage</th>';
           }
           header += '</tr>';
           $container.append($(header));
